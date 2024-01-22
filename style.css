@@ -44,6 +44,18 @@ html {
 .nav {
   display: none;
 }
+.new-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.new-user-login {
+  display: block;
+}
+.ham-nav {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
@@ -82,14 +94,31 @@ html {
   background-color: var(--link-color);
   color: #f0f0f0;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.cross {
+  display: none;
+  border: none;
+  border-radius: 0.375rem;
+  background-color: var(--link-color);
+  color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 .menu-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.cross-icon {
   height: 1.5rem;
   width: 1.5rem;
 }
 @media screen and (max-width: 768px) {
   .menu-button {
     display: block;
+  }
+  .cross {
+    /* display: block; */
   }
 }
 
@@ -113,6 +142,17 @@ html {
     transform: translateX(-100%);
   }
   100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0%);
     opacity: 100%;
   }
 }
